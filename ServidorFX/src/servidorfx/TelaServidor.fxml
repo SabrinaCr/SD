@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="servidorfx.TelaServidorController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabela" layoutX="14.0" layoutY="14.0" prefHeight="335.0" prefWidth="510.0">
+              <columns>
+                <TableColumn fx:id="colNome" prefWidth="194.0" text="Nome" />
+                <TableColumn fx:id="colMensagem" prefWidth="315.0" text="Mensagem" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <HBox prefHeight="47.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnIniciar" mnemonicParsing="false" onAction="#evtIniciar" prefWidth="100.0" text="Iniciar" />
+            <Button fx:id="btnEncerrar" mnemonicParsing="false" onAction="#evtEncerrar" prefWidth="100.0" text="Encerrar" />
+            <Button fx:id="btnSair" mnemonicParsing="false" onAction="#evtSair" prefWidth="100.0" text="Sair" />
+            <Label fx:id="lblStatus" text="Status" />
+         </children>
+         <padding>
+            <Insets left="130.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <Pane prefHeight="353.0" prefWidth="271.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabelaOnline" layoutY="12.0" prefHeight="338.0" prefWidth="272.0">
+              <columns>
+                <TableColumn fx:id="colIP" prefWidth="75.0" text="IP" />
+                <TableColumn fx:id="colPorta" prefWidth="68.0" text="Porta" />
+                  <TableColumn fx:id="colNomeOn" prefWidth="128.0" text="Nome" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
